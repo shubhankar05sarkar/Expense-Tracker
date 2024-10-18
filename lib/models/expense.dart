@@ -3,26 +3,24 @@ class Expense {
   final String title;
   final double amount;
   final DateTime date;
-  final String type; // New field for expense type
+  final String type;
 
   Expense({
     required this.id,
     required this.title,
     required this.amount,
     required this.date,
-    required this.type, // Add this
+    required this.type,
   });
 
-  // Convert Expense object to JSON
   Map<String, dynamic> toJson() => {
     'id': id,
     'title': title,
     'amount': amount,
     'date': date.toIso8601String(),
-    'type': type, // Add this
+    'type': type,
   };
 
-  // Create Expense object from JSON
   factory Expense.fromJson(Map<String, dynamic> json) {
     return Expense(
       id: json['id'],

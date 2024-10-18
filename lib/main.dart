@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'expense_chart.dart'; // Adjust the path accordingly
+import 'expense_chart.dart';
 import 'pages/expense_tracker.dart';
 
 void main() => runApp(ExpenseTrackerApp());
@@ -10,7 +10,7 @@ class ExpenseTrackerApp extends StatefulWidget {
 }
 
 class _ExpenseTrackerAppState extends State<ExpenseTrackerApp> {
-  ThemeMode _themeMode = ThemeMode.system; // Initial theme follows system setting
+  ThemeMode _themeMode = ThemeMode.system;
 
   void _toggleThemeMode() {
     setState(() {
@@ -37,18 +37,18 @@ class _ExpenseTrackerAppState extends State<ExpenseTrackerApp> {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.dark,
       ),
-      themeMode: _themeMode, // Use the toggled theme mode
+      themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
           title: Text('Expense Tracker'),
           leading: IconButton(
             icon: Icon(_themeMode == ThemeMode.light
-                ? Icons.nightlight_round // Moon icon for light mode
-                : Icons.wb_sunny), // Sun icon for dark mode
-            onPressed: _toggleThemeMode, // Toggle theme on button press
+                ? Icons.nightlight_round
+                : Icons.wb_sunny),
+            onPressed: _toggleThemeMode,
           ),
         ),
-        body: ExpenseTrackerHome(), // Your home widget
+        body: ExpenseTrackerHome(),
       ),
     );
   }

@@ -98,7 +98,7 @@ class _ExpenseTrackerHomeState extends State<ExpenseTrackerHome> {
           ),
         ],
       ),
-      body: SingleChildScrollView( // Wrap Column in SingleChildScrollView
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
@@ -130,17 +130,16 @@ class _ExpenseTrackerHomeState extends State<ExpenseTrackerHome> {
                 }).toList(),
               ),
             ),
-            // Add the Expense Chart
             Container(
-              height: 250, // Set a specific height for the chart
+              height: 250,
               child: ExpenseChart(
-                  filteredExpenses), // Pass the filtered expenses list
+                  filteredExpenses),
             ),
             Container(
               height: MediaQuery
                   .of(context)
                   .size
-                  .height * 0.5, // Adjust height as needed
+                  .height * 0.5,
               child: ExpensesList(filteredExpenses, _deleteExpense),
             ),
           ],

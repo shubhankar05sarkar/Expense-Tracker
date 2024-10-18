@@ -1,6 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import '../models/expense.dart'; // Make sure to import your Expense model
+import '../models/expense.dart';
 
 
 class ExpenseChart extends StatelessWidget {
@@ -26,7 +26,6 @@ class ExpenseChart extends StatelessWidget {
   List<PieChartSectionData> _buildChartSections() {
     Map<String, double> categoryTotals = {};
 
-    // Calculate total expenses per category
     for (var expense in expenses) {
       if (categoryTotals.containsKey(expense.type)) {
         categoryTotals[expense.type] = categoryTotals[expense.type]! + expense.amount;
@@ -35,7 +34,6 @@ class ExpenseChart extends StatelessWidget {
       }
     }
 
-    // Convert to PieChartSectionData
     return categoryTotals.entries.map((entry) {
       return PieChartSectionData(
         color: _getCategoryColor(entry.key),

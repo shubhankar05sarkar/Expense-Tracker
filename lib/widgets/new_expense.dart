@@ -31,7 +31,7 @@ class _NewExpenseState extends State<NewExpense> {
       enteredTitle,
       enteredAmount,
       _selectedDate!,
-      _selectedType, // Add this
+      _selectedType,
     );
 
     Navigator.of(context).pop();
@@ -89,7 +89,6 @@ class _NewExpenseState extends State<NewExpense> {
                 ],
               ),
             ),
-            // Dropdown for Expense Type
             DropdownButton<String>(
               value: _selectedType,
               onChanged: (newValue) {
