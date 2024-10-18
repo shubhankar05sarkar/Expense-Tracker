@@ -1,16 +1,26 @@
-# expense_track
+# flutter_expense_tracker_app
 
-A new Flutter project.
+Also known as expense manager and money manager, an expense tracker is a software or application that helps to keep an accurate record of your money inflow and outflow.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Add and Delete Expenses
+- Expense Categorization
+- Expense Filter
+- Total Expense Calculation
+- Visual Expense Chart
+- Light and Dark Mode Toggle
+- User-Friendly Interface
+  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Flutter dependencies
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.19.0
+  shared_preferences: ^2.3.2
+  fl_chart: ^0.69.0
+```
